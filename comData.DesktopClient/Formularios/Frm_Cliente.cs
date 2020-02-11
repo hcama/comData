@@ -104,6 +104,8 @@ namespace comData.DesktopClient.Formularios
             toolTip1.SetToolTip(this.ib_guardarCliente, "Guardar Cliente");
             toolTip1.SetToolTip(this.ib_ModificarCliente, "Modificar Cliente");
             toolTip1.SetToolTip(this.ibtn_EliminarCliente, "Eliminar Cliente");
+            toolTip1.SetToolTip(this.ibtnDeshacer, "Deshacer");
+            toolTip1.SetToolTip(this.ibn_BuscarCliente, "Buscar Cliente");
        
         }
 
@@ -213,6 +215,38 @@ namespace comData.DesktopClient.Formularios
                 }
                     
             }
+        }
+
+        private async void ibtnDeshacer_Click(object sender, EventArgs e)
+        {
+            IEnumerable<ClienteResource> clienteResources;
+            clienteResources = await getTodosClientes();
+            this.dgv_clientes.DataSource = null;
+            dgv_clientes.DataSource = clienteResources;
+
+            indicador = "I";
+            this.lbl_idCliente.Text = "0";
+            this.txt_nombre.Text = "";
+            this.txt_apellidopaterno.Text = "";
+            this.txt_apellidomaterno.Text = "";
+            this.dtp_fechaNacimiento.Value = DateTime.Now;
+        }
+
+        private async void ibn_BuscarCliente_Click(object sender, EventArgs e)
+        {
+            ClienteResource cliente = new ClienteResource();
+            cliente.Id = Convert.ToInt32(this.txt_BuscarId.Text.Trim());
+
+            cliente = await getClienteId(cliente);
+            if (cliente != null)
+            {
+
+                List<ClienteResource> clienteResources = new List<ClienteResource>();
+                clienteResources.Add(cliente);
+                this.dgv_clientes.DataSource = null;
+                dgv_clientes.DataSource = clienteResources;
+            }
+           
         }
     }
 }

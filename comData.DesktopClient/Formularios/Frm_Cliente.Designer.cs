@@ -42,6 +42,10 @@
             this.ibtn_EliminarCliente = new FontAwesome.Sharp.IconButton();
             this.ib_guardarCliente = new FontAwesome.Sharp.IconButton();
             this.lbl_idCliente = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_BuscarId = new System.Windows.Forms.TextBox();
+            this.ibn_BuscarCliente = new FontAwesome.Sharp.IconButton();
+            this.ibtnDeshacer = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +117,7 @@
             // dgv_clientes
             // 
             this.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_clientes.Location = new System.Drawing.Point(26, 256);
+            this.dgv_clientes.Location = new System.Drawing.Point(41, 277);
             this.dgv_clientes.Name = "dgv_clientes";
             this.dgv_clientes.Size = new System.Drawing.Size(569, 226);
             this.dgv_clientes.TabIndex = 10;
@@ -193,11 +197,63 @@
             this.lbl_idCliente.Text = "id";
             this.lbl_idCliente.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 245);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Buscar Id";
+            // 
+            // txt_BuscarId
+            // 
+            this.txt_BuscarId.Location = new System.Drawing.Point(96, 242);
+            this.txt_BuscarId.Name = "txt_BuscarId";
+            this.txt_BuscarId.Size = new System.Drawing.Size(79, 20);
+            this.txt_BuscarId.TabIndex = 18;
+            // 
+            // ibn_BuscarCliente
+            // 
+            this.ibn_BuscarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.ibn_BuscarCliente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.ibn_BuscarCliente.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.ibn_BuscarCliente.IconColor = System.Drawing.Color.Black;
+            this.ibn_BuscarCliente.IconSize = 24;
+            this.ibn_BuscarCliente.Location = new System.Drawing.Point(181, 237);
+            this.ibn_BuscarCliente.Name = "ibn_BuscarCliente";
+            this.ibn_BuscarCliente.Rotation = 0D;
+            this.ibn_BuscarCliente.Size = new System.Drawing.Size(68, 29);
+            this.ibn_BuscarCliente.TabIndex = 20;
+            this.ibn_BuscarCliente.TabStop = false;
+            this.ibn_BuscarCliente.UseVisualStyleBackColor = true;
+            this.ibn_BuscarCliente.Click += new System.EventHandler(this.ibn_BuscarCliente_Click);
+            // 
+            // ibtnDeshacer
+            // 
+            this.ibtnDeshacer.BackColor = System.Drawing.Color.Transparent;
+            this.ibtnDeshacer.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.ibtnDeshacer.IconChar = FontAwesome.Sharp.IconChar.UndoAlt;
+            this.ibtnDeshacer.IconColor = System.Drawing.Color.Black;
+            this.ibtnDeshacer.IconSize = 24;
+            this.ibtnDeshacer.Location = new System.Drawing.Point(365, 24);
+            this.ibtnDeshacer.Name = "ibtnDeshacer";
+            this.ibtnDeshacer.Rotation = 0D;
+            this.ibtnDeshacer.Size = new System.Drawing.Size(75, 46);
+            this.ibtnDeshacer.TabIndex = 21;
+            this.ibtnDeshacer.TabStop = false;
+            this.ibtnDeshacer.UseVisualStyleBackColor = true;
+            this.ibtnDeshacer.Click += new System.EventHandler(this.ibtnDeshacer_Click);
+            // 
             // Frm_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 614);
+            this.Controls.Add(this.ibtnDeshacer);
+            this.Controls.Add(this.ibn_BuscarCliente);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_BuscarId);
             this.Controls.Add(this.lbl_idCliente);
             this.Controls.Add(this.ib_guardarCliente);
             this.Controls.Add(this.ibtn_EliminarCliente);
@@ -213,6 +269,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_nombre);
             this.Name = "Frm_Cliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Frm_Cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clientes)).EndInit();
@@ -237,5 +294,9 @@
         private FontAwesome.Sharp.IconButton ibtn_EliminarCliente;
         private FontAwesome.Sharp.IconButton ib_guardarCliente;
         private System.Windows.Forms.Label lbl_idCliente;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_BuscarId;
+        private FontAwesome.Sharp.IconButton ibn_BuscarCliente;
+        private FontAwesome.Sharp.IconButton ibtnDeshacer;
     }
 }
