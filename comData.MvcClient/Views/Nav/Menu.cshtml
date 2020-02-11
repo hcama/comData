@@ -1,0 +1,132 @@
+﻿
+<style type="text/css">
+    .tree, .tree ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .tree ul {
+            margin-left: 1em;
+            position: relative;
+        }
+
+            .tree ul ul {
+                margin-left: .5em;
+            }
+
+            .tree ul:before {
+                content: "";
+                display: block;
+                width: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                border-left: 1px solid;
+            }
+
+        .tree li {
+            margin: 0;
+            padding: 0 1em;
+            line-height: 2em;
+            color: #369;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .tree ul li:before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 0;
+            border-top: 1px solid;
+            margin-top: -1px;
+            position: absolute;
+            top: 1em;
+            left: 0;
+        }
+
+        .tree ul li:last-child:before {
+            background: #fff;
+            height: auto;
+            top: 1em;
+            bottom: 0;
+        }
+
+    .indicator {
+        margin-right: 5px;
+    }
+
+    .tree li a {
+        text-decoration: none;
+        color: #369;
+    }
+
+    .tree li button, .tree li button:active, .tree li button:focus {
+        text-decoration: none;
+        color: #369;
+        border: none;
+        background: transparent;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        outline: 0;
+    }
+</style>
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('#tree1').treed();
+        $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+        $('#tree3').treed({ openedClass: 'glyphicon-chevron-right', closedClass: 'glyphicon-chevron-down' });
+    });
+
+    function MostrarPAdmin() {
+        var tree1 = $('#tree1');
+
+        var li_00 = $('<li/>');
+
+        var a_10 = $('<a/>');
+        var ul_10 = $('<ul/>');
+
+        var a_21 = '@Html.ActionLink("Principal", "Index", "Home")';
+
+        var li_21 = $('<li/>');
+        var li_22 = $('<li/>');
+
+        var ul_30 = $('<ul/>');
+
+        var li_46 = $('<li/>');
+
+
+        var a_56 = '@Html.ActionLink("Mantenimiento Cliente", "Index", "Cliente")';
+
+
+        a_10.text('comData').attr('href', '#');
+
+        li_21.append(a_21);
+
+        li_22.text('Aréa de Ventas');
+
+
+        li_46.append(a_56);
+
+        ul_30.append(li_46);
+
+        li_22.append(ul_30);
+
+
+        ul_10.append(li_21).append(li_22);
+
+        li_00.append(a_10).append(ul_10);
+        tree1.append(li_00);
+    }
+
+ 
+
+    $(document).ready(function () {
+        MostrarPAdmin();
+
+    });
+</script>
+
+<ul id="tree1"></ul>

@@ -4,55 +4,27 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="~/Scripts/jstree.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    
+      <script src="~/Scripts/jstree.js"></script>
 
 
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <script type="text/javascript">
-    @*$(document).ready(function () {
+    $(document).ready(function () {
 
-        var usuario_nombre = '@Session["usuario_nombre"]';
+  
         var menu_user = $('#menu_user');
-        menu_user.append('<span class="glyphicon glyphicon-user">' + usuario_nombre + '</span>')
+        menu_user.append('<span class="glyphicon glyphicon-user">' + 'Invitado' + '</span>')
 
-        $('#menu_salir').on('click', function (e) {
-            if (!(e.isDefaultPrevented())) {
-               //
-
-                var ObjectData = new Object();
-                var stringify = JSON.stringify(ObjectData);
-
-                $.ajax({
-                    type: "POST",
-                    url: "/Account/Salir",
-                    data: stringify,
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (response) {
-
-                       /* $(".alert").text(response);
-                        $(".alert").show();*/
-                        window.location.href = '@Url.Action("Login", "Account")';
-                    },
-                    failure: function (response) {
-                        alert(response.responseText);
-                    },
-                    error: function (response) {
-                        alert(response.responseText);
-                    }
-                });
-            }
-            return false;
-        });
-    });*@
+    })
     </script>
     <div class="navbar navbar-inverse" role="navigation">
         <a class="navbar-brand" href="#">comData</a>
@@ -62,10 +34,10 @@
         </ul>
     </div>
     <div class="row panel">
-        <div id="categories" class="col-xs-3">
-            @*@Html.Action("Menu", "Nav")*@
+        <div id="categories" class="col-md-2">
+            @Html.Action("Menu", "Nav")
         </div>
-        <div class="col-xs-8">
+        <div class="col-md-9">
             @RenderBody()
         </div>
     </div>
