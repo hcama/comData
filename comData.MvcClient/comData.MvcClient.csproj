@@ -138,6 +138,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\Cliente\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

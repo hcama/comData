@@ -2,11 +2,35 @@
     ViewBag.Title = "mantenimiento-cliente";
 }
 
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-5 align-self-center">
+            <h4 class="page-title">Mantenimiento Cliente</h4>
+            <div class="d-flex align-items-center">
+
+            </div>
+        </div>
+        <div class="col-7 align-self-center">
+            <div class="d-flex no-block justify-content-end align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" *ngif="!last" [routerlink]="url.url">
+                            <a href='javascript:void(0)'>Área de ventas</a>
+                        </li>
+                        <li class="breadcrumb-item active" *ngif="last">Mantenimiento Cliente</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="mantenimiento-cliente">
     <div class="page-header page-header-light">
         <div class="d-flex justify-content-end">
-            <a class="waves-effect waves-dark mr-2"  title="Agregar">
-                <i class="ti-plus font-20"></i>
+            <a id="agregarCliente"  class="waves-effect waves-dark mr-2" title="Agregar">
+                <i class="fas fa-user-plus"></i>
+                Nuevo
             </a>
 
         </div>
@@ -22,10 +46,8 @@
                 <form name="frm_busquedaCliente">
                     <div class="row form-group align-items-end">
                         <div class="col-md-3">
-                            <label>Tipo Cliente:</label>
-                            <select class="custom-select" [(ngmodel)]="tipoCliente.id" name="id">
-                                <option value="" selected>Todos</option>                               
-                            </select>
+                            <label>Id Cliente:</label>
+                            <input type="text" name="idClienteBuscar" class="form-control" maxlength="50" required>
                         </div>
                     </div>
                     <div class="row">
@@ -33,11 +55,11 @@
                             <div class="d-flex justify-content-end">
                                 <button id="btn_limpiar" type="reset" class="btn btn-light">
                                     Limpiar
-                                    <i class="icon-eraser3 ml-2"></i>
+                                    <i class="fas fa-eraser ml-2"></i>
                                 </button>
                                 <button id="btn_buscar" type="button" class="btn btn-primary ml-3">
                                     Buscar
-                                    <i class="icon-search4 ml-2"></i>
+                                    <i class="fas fa-search  ml-2"></i>                                   
                                 </button>
                             </div>
                         </div>
@@ -53,7 +75,7 @@
                     <th>Nombre </th>
                     <th>Apellido Paterno </th>
                     <th>Apellido Materno</th>
-                    <th>Tipo Cliente </th>
+                    <th>Fecha Nacimiento </th>
                     <th class="text-center">Acciones</th>
                     </thead>
                 </table>
@@ -61,7 +83,7 @@
         </div>
     </div>
 </div>
-<div class="modal p-form fade" id="mdl_ActualizarUsuario" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal p-form fade" id="mdl_ActualizarCliente" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-notify modal-warning" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-center">
@@ -92,11 +114,9 @@
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label class="col-form-label col-md-4" for="txt_user_name_MRU">Tipo Cliente: <span>(*)</span></label>
+                        <label class="col-form-label col-md-4" for="txt_user_name_MRU">Fecha Nacimiento: <span>(*)</span></label>
                         <div class="col-md-8">
-                            <select class="form-control custom-select" [(ngmodel)]="cliente.tipoClienteId" name="TipoClienteId" required>
-                                <option value="" selected>Seleccione</option>                               
-                            </select>
+
                         </div>
                     </div>
                 </div>
@@ -141,3 +161,18 @@
 
 </div>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        $("#agregarCliente").on("click", function (e) {
+            e.preventDefault();
+            g_accion = 'I';
+            //g_listaClientesSeleccionados = [];
+            //ObtenerListaUsuariosEmpresass_result(g_listaClientesSeleccionados);
+            $('#mdl_ActualizarCliente').modal('show');
+            return false;
+        });
+
+    })
+</script>
