@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,12 @@ namespace comData.DesktopClient
             Frm_Cliente frmCliente = new Frm_Cliente();
             frmCliente.MdiParent = this;
             frmCliente.Show();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("http://localhost:13001");
+            Process.Start(sInfo);
         }
 
 

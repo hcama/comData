@@ -67,6 +67,7 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItem3.Text = "Modulo 1- Aplicacion Web";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // tsm_aplicacionWindow
             // 

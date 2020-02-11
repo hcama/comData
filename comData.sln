@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comData.data", "comData.dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comData.DesktopClient", "comData.DesktopClient\comData.DesktopClient.csproj", "{839854EE-772E-4C22-B0AE-ED0078AE8BAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comData.MvcClient", "comData.MvcClient\comData.MvcClient.csproj", "{2B185AC4-38B0-4819-A050-C1296587E9EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{839854EE-772E-4C22-B0AE-ED0078AE8BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{839854EE-772E-4C22-B0AE-ED0078AE8BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{839854EE-772E-4C22-B0AE-ED0078AE8BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B185AC4-38B0-4819-A050-C1296587E9EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B185AC4-38B0-4819-A050-C1296587E9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B185AC4-38B0-4819-A050-C1296587E9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B185AC4-38B0-4819-A050-C1296587E9EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

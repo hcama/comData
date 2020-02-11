@@ -1,0 +1,73 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jstree.js"></script>
+
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+    @*$(document).ready(function () {
+
+        var usuario_nombre = '@Session["usuario_nombre"]';
+        var menu_user = $('#menu_user');
+        menu_user.append('<span class="glyphicon glyphicon-user">' + usuario_nombre + '</span>')
+
+        $('#menu_salir').on('click', function (e) {
+            if (!(e.isDefaultPrevented())) {
+               //
+
+                var ObjectData = new Object();
+                var stringify = JSON.stringify(ObjectData);
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Account/Salir",
+                    data: stringify,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+
+                       /* $(".alert").text(response);
+                        $(".alert").show();*/
+                        window.location.href = '@Url.Action("Login", "Account")';
+                    },
+                    failure: function (response) {
+                        alert(response.responseText);
+                    },
+                    error: function (response) {
+                        alert(response.responseText);
+                    }
+                });
+            }
+            return false;
+        });
+    });*@
+    </script>
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">comData</a>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="menu_user" href="#"> </a></li>
+            <li><a id="menu_salir" href="#"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+        </ul>
+    </div>
+    <div class="row panel">
+        <div id="categories" class="col-xs-3">
+            @*@Html.Action("Menu", "Nav")*@
+        </div>
+        <div class="col-xs-8">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
