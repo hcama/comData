@@ -61,12 +61,6 @@ namespace comData.api.App_Start
                 kernel.Dispose();
                 throw;
             }
-            //var kernel = new StandardKernel();
-            //kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
-            //kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-
-            //RegisterServices(kernel);
-            //return kernel;
         }
 
         /// <summary>
@@ -76,9 +70,17 @@ namespace comData.api.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IClienteService>().To<ClienteRepository>().InRequestScope();
-         
-            //System.Web.Mvc.DependencyResolver.SetResolver(new
-            //    comData.api.Infrastructure.NinjectDependencyResolver(kernel));
+
+        }
+    }
+    public static class NinjectConfig
+    {
+        public static IKernel CreateKernel()
+        {
+            var kernel = new StandardKernel();
+            //Create the bindings
+            kernel.Bind<IClienteService>().To<ClienteRepository>();
+            return kernel;
         }
     }
 }

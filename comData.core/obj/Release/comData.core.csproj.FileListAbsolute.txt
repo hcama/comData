@@ -1,0 +1,5 @@
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\bin\Release\comData.core.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\bin\Release\comData.core.pdb
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\obj\Release\comData.core.csprojAssemblyReference.cache
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\obj\Release\comData.core.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\obj\Release\comData.core.pdb

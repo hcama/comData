@@ -20,8 +20,18 @@ namespace comData.api.Controllers
         }
         public IEnumerable<Cliente> getTodosClientes()
         {
-            var clientes = _clienteService.getTodosClientes();
-            return clientes;
+            try
+            {
+                var clientes = _clienteService.getTodosClientes();
+                return clientes;
+            }
+            catch
+            {
+                Console.WriteLine("error"); 
+            }
+            return null;
+
+         
         }
         public Cliente getClienteId(int id)
         {

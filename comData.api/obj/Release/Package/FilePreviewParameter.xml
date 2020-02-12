@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="comDataapi20200211044041" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\Documentos\\hernan\\udemy\\Construyendo\ Web\ APIs\ RESTful\ con\ ASP\.NET\ Core\ 3\\codigo2013\\git\\comData\\comData\.api\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^F:\\Documentos\\hernan\\udemy\\Construyendo\ Web\ APIs\ RESTful\ con\ ASP\.NET\ Core\ 3\\codigo2013\\git\\comData\\comData\.api\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="AplicationDbContext-Web.config Connection String" description="" value="Data Source=tcp:comdataapi20200211044041dbserver.database.windows.net,1433;Initial Catalog=comDataapi20200211044041_db123456;User Id=sonda123456@comdataapi20200211044041dbserver;Password=c0mD4t41234556" tags="">
+    <parameterEntry kind="XmlFile" scope="F:\\Documentos\\hernan\\udemy\\Construyendo\ Web\ APIs\ RESTful\ con\ ASP\.NET\ Core\ 3\\codigo2013\\git\\comData\\comData\.api\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AplicationDbContext']/@connectionString" />
+  </parameter>
+</parameters>

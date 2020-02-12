@@ -53,3 +53,14 @@ F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codi
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\EntityFramework.xml
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\WebActivator.dll
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\WebApiContrib.IoC.Ninject.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Swashbuckle.Core.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\WebActivatorEx.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\EntityFramework.SqlServer.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\EntityFramework.SqlServer.xml
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.AspNet.WebApi.Owin.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.Owin.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Owin.dll
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.AspNet.WebApi.Owin.xml
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.Owin.xml
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.Owin.Host.SystemWeb.xml
