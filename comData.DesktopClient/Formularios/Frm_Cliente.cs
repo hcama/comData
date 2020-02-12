@@ -19,8 +19,7 @@ namespace comData.DesktopClient.Formularios
         HttpClient client;
         private string indicador;
         //The URL of the WEB API Service
-        string url = "http://localhost:12573/api/cliente";
-        //string url = "http://comdataapi20200211044041.azurewebsites.net/api/cliente";
+        string url = "http://localhost:12573/api/cliente";  
         public Frm_Cliente()
         {
             InitializeComponent();
