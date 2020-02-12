@@ -2,7 +2,3 @@ F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codi
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.core\bin\Debug\comData.core.pdb
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.core\obj\Debug\comData.core.dll
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.core\obj\Debug\comData.core.pdb
-F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\bin\Debug\comData.core.dll
-F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\bin\Debug\comData.core.pdb
-F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\obj\Debug\comData.core.dll
-F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\git\comData\comData.core\obj\Debug\comData.core.pdb

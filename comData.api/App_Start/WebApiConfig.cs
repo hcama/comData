@@ -15,7 +15,7 @@ namespace comData.api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            //config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
         }
     }
 }

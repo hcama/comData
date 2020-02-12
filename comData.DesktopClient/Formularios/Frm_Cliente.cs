@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -19,6 +20,7 @@ namespace comData.DesktopClient.Formularios
         private string indicador;
         //The URL of the WEB API Service
         string url = "http://localhost:12573/api/cliente";
+        //string url = "http://comdataapi20200211044041.azurewebsites.net/api/cliente";
         public Frm_Cliente()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace comData.DesktopClient.Formularios
         }
         public async Task<bool> deleteCliente(ClienteResource cliente)
         {
+ 
             HttpResponseMessage response = await client.DeleteAsync (url + "/" + cliente.Id);
             if (response.IsSuccessStatusCode)
             {
@@ -90,11 +93,18 @@ namespace comData.DesktopClient.Formularios
 
         private async void Frm_Cliente_Load(object sender, EventArgs e)
         {
-            IEnumerable<ClienteResource> clienteResources;
-            clienteResources = await getTodosClientes();
-            this.dgv_clientes.DataSource = null;
-            dgv_clientes.DataSource = clienteResources;
-
+            try
+            {
+                IEnumerable<ClienteResource> clienteResources;
+                clienteResources = await getTodosClientes();
+                this.dgv_clientes.DataSource = null;
+                dgv_clientes.DataSource = clienteResources;
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error al mostrar los clientes");
+            }    
+            
             ToolTip toolTip1 = new ToolTip();         
             toolTip1.AutoPopDelay = 5000;
             toolTip1.InitialDelay = 1000;
@@ -132,45 +142,53 @@ namespace comData.DesktopClient.Formularios
 
         private async void ib_guardarCliente_Click(object sender, EventArgs e)
         {
-            ClienteResource cliente = new ClienteResource();
-            cliente.Id = Convert.ToInt32 (  this.lbl_idCliente.Text.Trim());
-            cliente.Nombre = this.txt_nombre.Text.Trim();
-            cliente.ApellidoPaterno = this.txt_apellidopaterno.Text.Trim();
-            cliente.ApellidoMaterno = this.txt_apellidomaterno.Text.Trim();
-            cliente.FechaNacimiento = this.dtp_fechaNacimiento.Value;
-            if (indicador == "I")
+            try
             {
-                cliente = await createCliente(cliente);
-                if (cliente.Id == 0)
+                ClienteResource cliente = new ClienteResource();
+                cliente.Id = Convert.ToInt32(this.lbl_idCliente.Text.Trim());
+                cliente.Nombre = this.txt_nombre.Text.Trim();
+                cliente.ApellidoPaterno = this.txt_apellidopaterno.Text.Trim();
+                cliente.ApellidoMaterno = this.txt_apellidomaterno.Text.Trim();
+                cliente.FechaNacimiento = this.dtp_fechaNacimiento.Value;
+                if (indicador == "I")
                 {
-                    MessageBox.Show("Ocurrio un error al registrar al cliente");
+                    cliente = await createCliente(cliente);
+                    if (cliente.Id == 0)
+                    {
+                        MessageBox.Show("Ocurrio un error al registrar al cliente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se agrego el cliente");
+                        IEnumerable<ClienteResource> clienteResources;
+                        clienteResources = await getTodosClientes();
+                        this.dgv_clientes.DataSource = null;
+                        dgv_clientes.DataSource = clienteResources;
+                    }
                 }
-                else
+                else if (indicador == "M")
                 {
-                    MessageBox.Show("Se agrego el cliente");
-                    IEnumerable<ClienteResource> clienteResources;
-                    clienteResources = await getTodosClientes();
-                    this.dgv_clientes.DataSource = null;
-                    dgv_clientes.DataSource = clienteResources;
-                }
-            }
-            else if (indicador == "M")
-            {
-                cliente = await updateCliente(cliente);
-                if (cliente != null)
-                {
-                    MessageBox.Show("Se actualizo el cliente");
+                    cliente = await updateCliente(cliente);
+                    if (cliente != null)
+                    {
+                        MessageBox.Show("Se actualizo el cliente");
 
-                    IEnumerable<ClienteResource> clienteResources;
-                    clienteResources = await getTodosClientes();
-                    this.dgv_clientes.DataSource = null;
-                    dgv_clientes.DataSource = clienteResources;
-                }
-                else
-                {
-                    MessageBox.Show("Ocurrio un error al actualizar al cliente");
+                        IEnumerable<ClienteResource> clienteResources;
+                        clienteResources = await getTodosClientes();
+                        this.dgv_clientes.DataSource = null;
+                        dgv_clientes.DataSource = clienteResources;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocurrio un error al actualizar al cliente");
+                    }
                 }
             }
+            catch
+            {
+                MessageBox.Show("Ocurrio un error al conectarse al servidor");
+            } 
+
 
 
         }

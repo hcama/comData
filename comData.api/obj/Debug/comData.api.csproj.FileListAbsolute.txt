@@ -64,3 +64,4 @@ F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codi
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.AspNet.WebApi.Owin.xml
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.Owin.xml
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.api\bin\comData.api.XML
