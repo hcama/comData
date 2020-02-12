@@ -53,3 +53,4 @@ F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codi
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.MvcClient\bin\System.Runtime.xml
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.MvcClient\bin\System.Threading.Tasks.xml
 F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.MvcClient\obj\Debug\comData.MvcClient.csproj.App.config
+F:\Documentos\hernan\udemy\Construyendo Web APIs RESTful con ASP.NET Core 3\codigo2013\comData\comData.MvcClient\obj\Debug\comData.MvcClient.csprojResolveAssemblyReference.cache

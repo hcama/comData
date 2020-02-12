@@ -67,7 +67,7 @@
                 </form>
             </div>
         </div>
-        <div class="card">
+        <div class="card mt-2">
             <div class="card-body">
                 <table id="tbl_mostrarCliente" class="table datatable-basic">
                     <thead class="bg-primary">
@@ -227,7 +227,11 @@
                       }
                   }
               },
-            ]
+            ],
+            "bPaginate": false,
+            "bFilter": false,
+            "bInfo": false
+
         }).draw();
     }
     function getClienteIdR_result(data) {
@@ -288,6 +292,12 @@
                     getTodosClientesR().done(function (data) {
                         getTodosClientesR_result(data);
                     });
+                    $.toast({
+                        heading: 'Aviso',
+                        text: 'El registro se guardo.',
+                        position: 'top-right',
+                        icon: 'success'                      
+                    })
                 });
             } else if (g_accion == 'M') {
                 updateClienteR(obj).done(function () {
@@ -295,6 +305,12 @@
                     getTodosClientesR().done(function (data) {
                         getTodosClientesR_result(data);
                     });
+                    $.toast({
+                        heading: 'Aviso',
+                        text: 'El registro se modifico.',
+                        position: 'top-right',
+                        icon: 'success'
+                    })
                 });
             }
             return false;
@@ -362,6 +378,12 @@
                                 getTodosClientesR().done(function (data) {
                                     getTodosClientesR_result(data);
                                 });
+                                $.toast({
+                                    heading: 'Aviso',
+                                    text: 'El registro se elimino.',
+                                    position: 'top-right',
+                                    icon: 'success'
+                                })
                             }
                         });
                     }
@@ -409,8 +431,5 @@
             defaultDate: moment(),
             sideBySide: true
         });
-
-       
-
     })
 </script>

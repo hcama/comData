@@ -13,7 +13,8 @@ namespace comData.MvcClient.Controllers
     public class ClienteController : Controller
     {
         HttpClient client;
-        string url = "http://localhost:12573/api/cliente";       
+        string url = "http://localhost:12573/api/cliente";
+    
         public ClienteController()
         {
             client = new HttpClient();

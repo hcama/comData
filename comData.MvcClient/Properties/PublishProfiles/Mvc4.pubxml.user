@@ -10,7 +10,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/comData.MvcClient.dll">
-      <publishTime>02/12/2020 11:44:36</publishTime>
+      <publishTime>02/12/2020 12:44:18</publishTime>
     </File>
     <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
       <publishTime>02/10/2020 17:36:25</publishTime>
@@ -115,7 +115,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/11/2020 14:28:14</publishTime>
     </File>
     <File Include="Views/Cliente/mantenimiento-cliente.cshtml">
-      <publishTime>02/12/2020 11:42:01</publishTime>
+      <publishTime>02/12/2020 12:40:46</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>02/11/2020 14:37:02</publishTime>
@@ -124,7 +124,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/11/2020 14:38:33</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/12/2020 10:43:42</publishTime>
+      <publishTime>02/12/2020 12:30:09</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>02/11/2020 11:39:57</publishTime>
